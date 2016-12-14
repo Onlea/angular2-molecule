@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { sample, sample2 } from './sampleData';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  sample = sample;
+  constructor() {
+    let samples = [ sample, sample2 ];
+    let i = 0;
+    setInterval(() => {
+      this.sample = samples[i++ % 2];
+    }, 4000);
+  }
 }

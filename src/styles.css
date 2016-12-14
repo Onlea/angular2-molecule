@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.node text {
+    font: 10px sans-serif;
+    pointer-events: none;
+}
+.link line {
+    stroke: #696969;
+}
+link.separator {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.node.selected .atom-label {
+    fill: #f00;
+}

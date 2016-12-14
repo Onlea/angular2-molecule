@@ -4,15 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MoleculeComponent } from './molecule/molecule.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoleculeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
+  ],
+  entryComponents: [
+    MoleculeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
